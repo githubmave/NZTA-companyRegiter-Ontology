@@ -1,0 +1,167 @@
+==========The following is the class hierarchy for adding
+subclasses============
+
+
+Identity
+	personIdentity
+		passportNumber
+		driverLicense
+		irdNumber
+   	businessIdentity
+
+ 		companyNumber
+		NZBN
+		GSTNo
+
+Contact
+	
+	personContact
+		Name	
+		homePhone
+		workingPhone
+		personalEmail
+		workingEmail
+	      postal_Address
+
+	businessContact
+
+		companyName
+		tradingName
+		phone
+		mobile
+		invoice_address
+	      postal_Address
+
+PhysicalAddress
+	personAddress
+		homeAddress
+		workingAddress
+	businessAddress
+	
+		companyAddress
+
+
+
+
+Description
+	aspect
+
+		businessAspect
+
+			constitution_file
+			industry_classification
+			companyType
+		
+   			company_Record_Link
+            website		
+	
+	document
+		certification_of_Incooperation
+		
+		
+
+
+Entity
+
+	businessEntity
+		NZ_CooperationCompany
+	  	NZ_NolimitedCompany
+		OverseaASICCompany
+		OverseaNonASICCompany
+
+	person
+		direcctor
+
+		shareHolder 
+
+
+Time
+	status
+
+	start_date
+
+	end_date
+
+
+=============The following is adding object properties================================
+
+hasPhysicalAdress
+	hasPersonAddress
+		hasHomeAddress
+		hasWorkingAddress
+
+	hasBusinessAddress
+
+		hasCompanyAddress
+	
+
+hasTime
+	hasStartDate
+	hasEndDate
+	hasStatus
+
+
+hasDescription
+	hasAspect
+		hasBusinessAspect
+
+			hasCompanyRecordlink
+			hasCompanyType
+			hasConstitutionFile
+			hasIndustryClassification
+	      hasWebsite
+	hasDocument
+		hasCertificationOfIncooperation
+
+
+hasIdentity
+ 	hasPersonIdentity
+		hasDriverLicense
+	
+		hasIrdNumber
+	
+		hasPassportNumber	
+	hasBusinessIdentity
+
+
+		hasCompanyNumber
+		hasNZBN
+		hasGSTNo
+	
+hasContact
+
+	hasPersonContact
+		hasName
+		hasPostalAddress
+
+		hasPersonalEmail
+		hasWorkingEmail
+		hasHomePhone
+		hasMobile
+
+	hasBusinessContact
+
+		hasCompanyName
+		
+		hasInvoiceAddress
+		hasMobile
+		
+		hasTradingName
+		hasPhone		
+	
+	
+
+============================
+	
+	
+
+		
+
+
+
+
+
+
+
+
+

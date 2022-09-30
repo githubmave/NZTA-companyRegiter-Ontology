@@ -1,0 +1,270 @@
+@prefix : <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister> .
+
+<http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasContact
+:hasContact rdf:type owl:ObjectProperty ;
+            rdfs:domain :businessEntity ;
+            rdfs:range :Contact .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasDescription
+:hasDescription rdf:type owl:ObjectProperty ;
+                rdfs:domain :businessEntity ;
+                rdfs:range :Description .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasSharesIn
+:hasSharesIn rdf:type owl:ObjectProperty ;
+             rdfs:domain :businessEntity ,
+                         :shareholder ;
+             rdfs:range :businessEntity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasTime
+:hasTime rdf:type owl:ObjectProperty ;
+         rdfs:domain :businessEntity ;
+         rdfs:range :Time .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#isHeadOf
+:isHeadOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :director ;
+          rdfs:range :businessEntity .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Certificate_Of_Incorporation
+:Certificate_Of_Incorporation rdf:type owl:DatatypeProperty ;
+                              rdfs:domain :document ;
+                              rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#CompanyNumber
+:CompanyNumber rdf:type owl:DatatypeProperty ;
+               rdfs:domain :businessEntity ;
+               rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Company_record_link
+:Company_record_link rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :aspect ;
+                     rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Email
+:Email rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Contact ;
+       rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Incorporation_Date
+:Incorporation_Date rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Time ;
+                    rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#IndustryClassification
+:IndustryClassification rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :document ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Invoice_Adddress
+:Invoice_Adddress rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Contact ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#NZBN
+:NZBN rdf:type owl:DatatypeProperty ;
+      rdfs:domain :businessEntity ;
+      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#TaxCode_GST
+:TaxCode_GST rdf:type owl:DatatypeProperty ;
+             rdfs:domain :businessEntity ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#TimeOfCurr_Add
+:TimeOfCurr_Add rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Time ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#TotalNumberOfShares
+:TotalNumberOfShares rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :aspect ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#biz_percentageHold
+:biz_percentageHold rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :businessEntity ;
+                    rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#companyName
+:companyName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :businessEntity ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#constitution_file
+:constitution_file rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :document ;
+                   rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#directorStatus
+:directorStatus rdf:type owl:DatatypeProperty ;
+                rdfs:domain :director ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#percentageHold
+:percentageHold rdf:type owl:DatatypeProperty ;
+                rdfs:domain :shareholder ;
+                rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#personName
+:personName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :person ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#physical_Address
+:physical_Address rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Contact ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#shareHolderStatus
+:shareHolderStatus rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :shareholder ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#trading_Name
+:trading_Name rdf:type owl:DatatypeProperty ;
+              rdfs:domain :businessEntity ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#web_site
+:web_site rdf:type owl:DatatypeProperty ;
+          rdfs:domain :aspect ;
+          rdfs:range xsd:anyURI .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Contact
+:Contact rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Description
+:Description rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#NZ_Co-operattive_Company
+:NZ_Co-operattive_Company rdf:type owl:Class ;
+                          rdfs:subClassOf :entity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#NZ_NoLimited_Company
+:NZ_NoLimited_Company rdf:type owl:Class ;
+                      rdfs:subClassOf :entity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Oversea_ASIC_Company
+:Oversea_ASIC_Company rdf:type owl:Class ;
+                      rdfs:subClassOf :entity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Oversea_Non-ASIC_Company
+:Oversea_Non-ASIC_Company rdf:type owl:Class ;
+                          rdfs:subClassOf :entity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Time
+:Time rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#aspect
+:aspect rdf:type owl:Class ;
+        rdfs:subClassOf :Description .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity
+:businessEntity rdf:type owl:Class ;
+                rdfs:subClassOf :entity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#director
+:director rdf:type owl:Class ;
+          rdfs:subClassOf :person ;
+          owl:disjointWith :shareholder .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document
+:document rdf:type owl:Class ;
+          rdfs:subClassOf :Description .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#entity
+:entity rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#person
+:person rdf:type owl:Class ;
+        rdfs:subClassOf :entity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#shareholder
+:shareholder rdf:type owl:Class ;
+             rdfs:subClassOf :person .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Contact
+                :Description
+                :Time
+                :businessEntity
+                :person
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :NZ_Co-operattive_Company
+                :NZ_NoLimited_Company
+                :Oversea_ASIC_Company
+                :Oversea_Non-ASIC_Company
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

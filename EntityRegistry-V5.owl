@@ -1,0 +1,363 @@
+@prefix : <http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4> .
+
+<http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4> rdf:type owl:Ontology ;
+                                                                         rdfs:comment "afsd"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_aspect
+:has_aspect rdf:type owl:ObjectProperty ;
+            rdfs:domain :uniCode ;
+            rdfs:range :aspect .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_business_shares_in
+:has_business_shares_in rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :has_shares_in ;
+                        rdfs:domain :businessEntity ;
+                        rdfs:range :uniCode .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_document
+:has_document rdf:type owl:ObjectProperty ;
+              rdfs:domain :uniCode ;
+              rdfs:range :documents .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_location
+:has_location rdf:type owl:ObjectProperty ;
+              rdfs:domain :uniCode ;
+              rdfs:range :location .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_percent_of_business_shares
+:has_percent_of_business_shares rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :has_percents_of__shares ;
+                                rdfs:domain :businessEntity ;
+                                rdfs:range :quantity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_percent_of_personal_shares
+:has_percent_of_personal_shares rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :has_percents_of__shares ;
+                                rdfs:domain :director ;
+                                rdfs:range :quantity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_percents_of__shares
+:has_percents_of__shares rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_person_share_in
+:has_person_share_in rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :has_shares_in ;
+                     rdfs:domain :director ;
+                     rdfs:range :uniCode .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_quantity
+:has_quantity rdf:type owl:ObjectProperty ;
+              rdfs:domain :uniCode ;
+              rdfs:range :quantity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_shares_in
+:has_shares_in rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_thing-in-role
+:has_thing-in-role rdf:type owl:ObjectProperty ;
+                   rdfs:domain :uniCode ;
+                   rdfs:range :things-in-role .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_time
+:has_time rdf:type owl:ObjectProperty ;
+          rdfs:domain :uniCode ;
+          rdfs:range :time-in-role .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_time_changed_at
+:has_time_changed_at rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :has_time ;
+                     rdfs:domain :location ;
+                     rdfs:range :time_instance .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_type_memeber
+:has_type_memeber rdf:type owl:ObjectProperty ;
+                  rdfs:domain :entityTypeSchema ;
+                  rdfs:range :entityTypeIdentifier .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_business_type_of
+:has_business_type_of rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :entityTypeIdentifier .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#has_set_up_on
+:has_set_up_on rdf:type owl:DatatypeProperty ;
+               rdfs:domain :corporation_date .
+
+
+###  http://www.w3.org/2002/07/owl#topDataProperty
+owl:topDataProperty rdfs:domain :industry_classification .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#GST_No
+:GST_No rdf:type owl:Class ;
+        rdfs:subClassOf :uniCode .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#NZBN
+:NZBN rdf:type owl:Class ;
+      rdfs:subClassOf :uniCode .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#addressComponents
+:addressComponents rdf:type owl:Class ;
+                   rdfs:subClassOf :description .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#aspect
+:aspect rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#businessEntity
+:businessEntity rdf:type owl:Class ;
+                rdfs:subClassOf :things-in-role ;
+                owl:disjointWith :director .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#catogery
+:catogery rdf:type owl:Class ;
+          rdfs:subClassOf :aspect ;
+          owl:disjointWith :description .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#certificate
+:certificate rdf:type owl:Class ;
+             rdfs:subClassOf :documents ;
+             owl:disjointWith :file .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#certification_of_incorporation
+:certification_of_incorporation rdf:type owl:Class ;
+                                rdfs:subClassOf :certificate .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#company_Record_Link
+:company_Record_Link rdf:type owl:Class ;
+                     rdfs:subClassOf :file ;
+                     owl:disjointWith :constitution_file .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#company_number
+:company_number rdf:type owl:Class ;
+                rdfs:subClassOf :uniCode .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#constitution_file
+:constitution_file rdf:type owl:Class ;
+                   rdfs:subClassOf :file .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#corporation_date
+:corporation_date rdf:type owl:Class ;
+                  rdfs:subClassOf :time_instance .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#description
+:description rdf:type owl:Class ;
+             rdfs:subClassOf :aspect .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#director
+:director rdf:type owl:Class ;
+          rdfs:subClassOf :things-in-role .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#documents
+:documents rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#email
+:email rdf:type owl:Class ;
+       rdfs:subClassOf :addressComponents .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#entityTypeIdentifier
+:entityTypeIdentifier rdf:type owl:Class ;
+                      rdfs:subClassOf :catogery .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#entityTypeSchema
+:entityTypeSchema rdf:type owl:Class ;
+                  rdfs:subClassOf :catogery .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#file
+:file rdf:type owl:Class ;
+      rdfs:subClassOf :documents .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#industry_classification
+:industry_classification rdf:type owl:Class ;
+                         rdfs:subClassOf :catogery .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#invoiceAddress
+:invoiceAddress rdf:type owl:Class ;
+                rdfs:subClassOf :addressComponents .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#location
+:location rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#name
+:name rdf:type owl:Class ;
+      rdfs:subClassOf :description .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#phone
+:phone rdf:type owl:Class ;
+       rdfs:subClassOf :description .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#physicalAddress
+:physicalAddress rdf:type owl:Class ;
+                 rdfs:subClassOf :addressComponents .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#physicalLocation
+:physicalLocation rdf:type owl:Class ;
+                  rdfs:subClassOf :location .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#quantity
+:quantity rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#shareHolder
+:shareHolder rdf:type owl:Class ;
+             rdfs:subClassOf :businessEntity ,
+                             :director .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#shares
+:shares rdf:type owl:Class ;
+        rdfs:subClassOf :quantity .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#status
+:status rdf:type owl:Class ;
+        rdfs:subClassOf :time-in-role .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#things-in-role
+:things-in-role rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#time-in-role
+:time-in-role rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#time_instance
+:time_instance rdf:type owl:Class ;
+               rdfs:subClassOf :time-in-role .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#time_period
+:time_period rdf:type owl:Class ;
+             rdfs:subClassOf :time-in-role .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#tradingName
+:tradingName rdf:type owl:Class ;
+             rdfs:subClassOf :name .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#uniCode
+:uniCode rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/CompanyRegistry-V4#web_site
+:web_site rdf:type owl:Class ;
+          rdfs:subClassOf :addressComponents .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :GST_No
+                :NZBN
+                :company_number
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :addressComponents
+                :name
+                :phone
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :aspect
+                :documents
+                :location
+                :quantity
+                :things-in-role
+                :time-in-role
+                :uniCode
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :email
+                :invoiceAddress
+                :physicalAddress
+                :web_site
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :entityTypeIdentifier
+                :entityTypeSchema
+                :industry_classification
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :status
+                :time_instance
+                :time_period
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
