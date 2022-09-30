@@ -1,12 +1,12 @@
-@prefix : <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#> .
+@prefix : <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12> .
+@base <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15> .
 
-<http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12> rdf:type owl:Ontology ;
+<http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15> rdf:type owl:Ontology ;
                                                                           rdfs:comment "asfd"@en .
 
 #################################################################
@@ -36,7 +36,7 @@
                                                                              rdfs:range <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Time> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasAspect
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasAspect
 :hasAspect rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasDescription> ;
            rdf:type owl:FunctionalProperty ;
@@ -44,7 +44,7 @@
            rdfs:range <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#aspect> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasBusinessAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasBusinessAddress
 :hasBusinessAddress rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :hasPhysicalAdress ;
                     rdf:type owl:FunctionalProperty ;
@@ -52,7 +52,7 @@
                     rdfs:range :businessAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasBusinessAspect
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasBusinessAspect
 :hasBusinessAspect rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasAspect ;
                    rdf:type owl:FunctionalProperty ;
@@ -60,14 +60,14 @@
                    rdfs:range :businessAspect .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasBusinessContact
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasBusinessContact
 :hasBusinessContact rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasContact> ;
                     rdfs:domain <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> ;
                     rdfs:range :businessContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasBusinessIdentity
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasBusinessIdentity
 :hasBusinessIdentity rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :hasIdentity ;
                      rdf:type owl:FunctionalProperty ;
@@ -75,7 +75,7 @@
                      rdfs:range :businessIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasBusinessShareIn
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasBusinessShareIn
 :hasBusinessShareIn rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     rdf:type owl:FunctionalProperty ;
@@ -83,96 +83,96 @@
                     rdfs:range <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasCertificationOfIncooperation
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasCertificationOfIncooperation
 :hasCertificationOfIncooperation rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf :hasDocument ;
-                                 rdfs:range :certification_of_Incooperation .
+                                 rdf:type owl:FunctionalProperty ;
+                                 rdfs:range :certificationOfIncooperation .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasCompanyAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasCompanyAddress
 :hasCompanyAddress rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasBusinessAddress ;
                    rdf:type owl:FunctionalProperty ;
                    rdfs:range :companyAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasCompanyName
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasCompanyName
 :hasCompanyName rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasBusinessContact ;
                 rdf:type owl:FunctionalProperty ;
                 rdfs:range :companyName .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasCompanyNumber
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasCompanyNumber
 :hasCompanyNumber rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasBusinessIdentity ;
                   rdf:type owl:FunctionalProperty ;
                   rdfs:range :companyNumber .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasCompanyRecordlink
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasCompanyRecordlink
 :hasCompanyRecordlink rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :hasBusinessAspect ;
                       rdf:type owl:FunctionalProperty ;
                       rdfs:range :company_Record_Link .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasCompanyType
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasCompanyType
 :hasCompanyType rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasBusinessAspect ;
                 rdfs:range :companyType .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasConstitutionFile
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasConstitutionFile
 :hasConstitutionFile rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf :hasBusinessAspect ;
-                     rdfs:range :constitution_file .
+                     rdfs:subPropertyOf :hasDocument ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:range :constitutionFile .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasDocument
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasDocument
 :hasDocument rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasDescription> ;
-             rdf:type owl:FunctionalProperty ;
-             rdfs:domain :Entity ;
-             rdfs:range <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document> .
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdf:type owl:FunctionalProperty .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasDriverLicense
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasDriverLicense
 :hasDriverLicense rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasPersonIdentity ;
                   rdf:type owl:FunctionalProperty ;
                   rdfs:range :driverLicense .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasEndDate
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasEndDate
 :hasEndDate rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasTime> ;
             rdf:type owl:FunctionalProperty ;
             rdfs:range :endDate .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasGSTNo
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasGSTNo
 :hasGSTNo rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasBusinessIdentity ;
           rdf:type owl:FunctionalProperty ;
           rdfs:range :GSTNo .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasHomeAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasHomeAddress
 :hasHomeAddress rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasPersonAddress ;
                 rdf:type owl:FunctionalProperty ;
                 rdfs:range :homeAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasHomePhone
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasHomePhone
 :hasHomePhone rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasPersonContact ;
               rdf:type owl:FunctionalProperty ;
               rdfs:range :homePhone .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasIdentity
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasIdentity
 :hasIdentity rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              rdf:type owl:FunctionalProperty ;
@@ -180,55 +180,55 @@
              rdfs:range :Identity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasIndustryClassification
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasIndustryClassification
 :hasIndustryClassification rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf :hasBusinessAspect ;
                            rdfs:range :industry_classification .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasInvoiceAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasInvoiceAddress
 :hasInvoiceAddress rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasBusinessContact ;
                    rdf:type owl:FunctionalProperty ;
                    rdfs:range :invoice_address .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasIrdNumber
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasIrdNumber
 :hasIrdNumber rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :hasPersonIdentity ;
               rdf:type owl:FunctionalProperty ;
               rdfs:range :irdNumber .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasMobile
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasMobile
 :hasMobile rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :hasBusinessContact ;
            rdf:type owl:FunctionalProperty ;
            rdfs:range :mobile .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasNZBN
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasNZBN
 :hasNZBN rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasBusinessIdentity ;
          rdf:type owl:FunctionalProperty ;
          rdfs:range :NZBN .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasName
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasName
 :hasName rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasPersonContact ;
          rdf:type owl:FunctionalProperty ;
          rdfs:range :Name .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPassportNumber
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPassportNumber
 :hasPassportNumber rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasPersonIdentity ;
                    rdf:type owl:FunctionalProperty ;
                    rdfs:range :passportNumber .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPersonAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPersonAddress
 :hasPersonAddress rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasPhysicalAdress ;
                   rdf:type owl:FunctionalProperty ;
@@ -236,7 +236,7 @@
                   rdfs:range :personAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPersonContact
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPersonContact
 :hasPersonContact rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasContact> ;
                   rdf:type owl:FunctionalProperty ;
@@ -244,7 +244,7 @@
                   rdfs:range :personContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPersonIdentity
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPersonIdentity
 :hasPersonIdentity rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasIdentity ;
                    rdf:type owl:FunctionalProperty ;
@@ -252,7 +252,7 @@
                    rdfs:range :personIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPersonShareIn
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPersonShareIn
 :hasPersonShareIn rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf owl:topObjectProperty ;
                   rdf:type owl:FunctionalProperty ;
@@ -260,56 +260,56 @@
                   rdfs:range <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPersonalEmail
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPersonalEmail
 :hasPersonalEmail rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :hasPersonContact ;
                   rdf:type owl:FunctionalProperty ;
                   rdfs:range :personalEmail .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPhone
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPhone
 :hasPhone rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :hasBusinessContact ;
           rdf:type owl:FunctionalProperty ;
           rdfs:range :phone .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPhysicalAdress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPhysicalAdress
 :hasPhysicalAdress rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf owl:topObjectProperty ;
                    rdfs:domain :Entity ;
                    rdfs:range :PhysicalAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasPostalAdddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasPostalAdddress
 :hasPostalAdddress rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasContact> ;
                    rdf:type owl:FunctionalProperty ;
                    rdfs:range :postalAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasStartDate
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasStartDate
 :hasStartDate rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasTime> ;
               rdf:type owl:FunctionalProperty ;
               rdfs:range :startDate .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasStatus
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasStatus
 :hasStatus rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#hasTime> ;
            rdf:type owl:FunctionalProperty ;
            rdfs:range :status .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasTradingName
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasTradingName
 :hasTradingName rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :hasBusinessContact ;
                 rdf:type owl:FunctionalProperty ;
                 rdfs:range :tradingName .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasWebsite
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasWebsite
 :hasWebsite rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasAspect ;
             rdf:type owl:FunctionalProperty ;
@@ -318,28 +318,28 @@
             rdfs:range :website .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasWorkingAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasWorkingAddress
 :hasWorkingAddress rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :hasPersonAddress ;
                    rdf:type owl:FunctionalProperty ;
                    rdfs:range :workingAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasWorkingEmail
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasWorkingEmail
 :hasWorkingEmail rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasPersonContact ;
                  rdf:type owl:FunctionalProperty ;
                  rdfs:range :workingEmail .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#hasWorkingPhone
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#hasWorkingPhone
 :hasWorkingPhone rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasPersonContact ;
                  rdf:type owl:FunctionalProperty ;
                  rdfs:range :workingPhone .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#isHeadOf
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#isHeadOf
 :isHeadOf rdf:type owl:ObjectProperty ;
           owl:inverseOf :isManagedBy ;
           rdf:type owl:FunctionalProperty ;
@@ -347,11 +347,17 @@
           rdfs:range <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#isManagedBy
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#isManagedBy
 :isManagedBy rdf:type owl:ObjectProperty ,
                       owl:FunctionalProperty ;
              rdfs:domain <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> ;
              rdfs:range :direcctor .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:FunctionalProperty ;
+                      rdfs:domain :Entity ;
+                      rdfs:range <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document> .
 
 
 #################################################################
@@ -383,8 +389,7 @@
 
 
 ###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document
-<http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document> rdf:type owl:Class ;
-                                                                              rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Description> .
+<http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document> rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#person
@@ -392,229 +397,239 @@
                                                                             rdfs:subClassOf :Entity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#Entity
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#DateTime
+:DateTime rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Time> .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#Entity
 :Entity rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#GSTNo
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#GSTNo
 :GSTNo rdf:type owl:Class ;
        rdfs:subClassOf :businessIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#Identity
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#Identity
 :Identity rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#NZBN
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#NZBN
 :NZBN rdf:type owl:Class ;
       rdfs:subClassOf :businessIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#NZ_CooperationCompany
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#NZ_CooperationCompany
 :NZ_CooperationCompany rdf:type owl:Class ;
                        rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#NZ_NolimitedCompany
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#NZ_NolimitedCompany
 :NZ_NolimitedCompany rdf:type owl:Class ;
                      rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#Name
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#Name
 :Name rdf:type owl:Class ;
       rdfs:subClassOf :personContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#OverseaASICCompany
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#OverseaASICCompany
 :OverseaASICCompany rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#OverseaNonASICCompany
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#OverseaNonASICCompany
 :OverseaNonASICCompany rdf:type owl:Class ;
                        rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#businessEntity> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#PhysicalAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#PhysicalAddress
 :PhysicalAddress rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#businessAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#businessAddress
 :businessAddress rdf:type owl:Class ;
                  rdfs:subClassOf :PhysicalAddress ;
                  owl:disjointWith :personAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#businessAspect
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#businessAspect
 :businessAspect rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#aspect> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#businessContact
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#businessContact
 :businessContact rdf:type owl:Class ;
                  rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Contact> ;
                  owl:disjointWith :personContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#businessIdentity
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#businessIdentity
 :businessIdentity rdf:type owl:Class ;
                   rdfs:subClassOf :Identity ;
                   owl:disjointWith :personIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#certification_of_Incooperation
-:certification_of_Incooperation rdf:type owl:Class ;
-                                rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document> .
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#certificationOfIncooperation
+:certificationOfIncooperation rdf:type owl:Class ;
+                              rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#companyAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#companyAddress
 :companyAddress rdf:type owl:Class ;
                 rdfs:subClassOf :businessAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#companyName
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#companyName
 :companyName rdf:type owl:Class ;
              rdfs:subClassOf :businessContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#companyNumber
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#companyNumber
 :companyNumber rdf:type owl:Class ;
                rdfs:subClassOf :businessIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#companyType
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#companyType
 :companyType rdf:type owl:Class ;
              rdfs:subClassOf :businessAspect .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#company_Record_Link
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#company_Record_Link
 :company_Record_Link rdf:type owl:Class ;
                      rdfs:subClassOf :businessAspect .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#constitution_file
-:constitution_file rdf:type owl:Class ;
-                   rdfs:subClassOf :businessAspect .
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#constitutionFile
+:constitutionFile rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#document> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#direcctor
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#direcctor
 :direcctor rdf:type owl:Class ;
            rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#person> ;
            owl:disjointWith :shareHolder .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#driverLicense
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#driverLicense
 :driverLicense rdf:type owl:Class ;
                rdfs:subClassOf :personIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#endDate
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#endDate
 :endDate rdf:type owl:Class ;
          rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Time> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#homeAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#homeAddress
 :homeAddress rdf:type owl:Class ;
              rdfs:subClassOf :personAddress ;
              owl:disjointWith :workingAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#homePhone
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#homePhone
 :homePhone rdf:type owl:Class ;
            rdfs:subClassOf :personContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#industry_classification
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#industry_classification
 :industry_classification rdf:type owl:Class ;
                          rdfs:subClassOf :businessAspect .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#invoice_address
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#invoice_address
 :invoice_address rdf:type owl:Class ;
                  rdfs:subClassOf :businessContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#irdNumber
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#irdNumber
 :irdNumber rdf:type owl:Class ;
            rdfs:subClassOf :personIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#mobile
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#mobile
 :mobile rdf:type owl:Class ;
         rdfs:subClassOf :businessContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#passportNumber
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#passportNumber
 :passportNumber rdf:type owl:Class ;
                 rdfs:subClassOf :personIdentity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#personAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#personAddress
 :personAddress rdf:type owl:Class ;
                rdfs:subClassOf :PhysicalAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#personContact
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#personAspect
+:personAspect rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#aspect> .
+
+
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#personContact
 :personContact rdf:type owl:Class ;
                rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Contact> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#personIdentity
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#personIdentity
 :personIdentity rdf:type owl:Class ;
                 rdfs:subClassOf :Identity .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#personalEmail
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#personalEmail
 :personalEmail rdf:type owl:Class ;
                rdfs:subClassOf :personContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#phone
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#phone
 :phone rdf:type owl:Class ;
        rdfs:subClassOf :businessContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#postalAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#postalAddress
 :postalAddress rdf:type owl:Class ;
                rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Contact> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#shareHolder
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#shareHolder
 :shareHolder rdf:type owl:Class ;
              rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#person> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#startDate
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#startDate
 :startDate rdf:type owl:Class ;
            rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Time> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#status
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#status
 :status rdf:type owl:Class ;
         rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#Time> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#tradingName
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#tradingName
 :tradingName rdf:type owl:Class ;
              rdfs:subClassOf :businessContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#website
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#website
 :website rdf:type owl:Class ;
          rdfs:subClassOf <http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister#aspect> .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#workingAddress
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#workingAddress
 :workingAddress rdf:type owl:Class ;
                 rdfs:subClassOf :personAddress .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#workingEmail
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#workingEmail
 :workingEmail rdf:type owl:Class ;
               rdfs:subClassOf :personContact .
 
 
-###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V12#workingPhone
+###  http://www.semanticweb.org/chanz/ontologies/2022/8/companyRegister-V15#workingPhone
 :workingPhone rdf:type owl:Class ;
               rdfs:subClassOf :personContact .
 
@@ -654,7 +669,7 @@
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( :companyType
                 :company_Record_Link
-                :constitution_file
+                :constitutionFile
                 :industry_classification
               )
 ] .
