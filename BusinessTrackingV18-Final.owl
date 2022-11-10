@@ -1,0 +1,624 @@
+@prefix : <http://www.semanticweb.org/chanz/ontologies/2022/10/BusinessTracking-V8#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/chanz/ontologies/2022/10/BusinessTracking-V8> .
+
+<http://www.semanticweb.org/chanz/ontologies/2022/10/BusinessTracking-V8> rdf:type owl:Ontology ;
+                                                                           rdfs:comment "asfd"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/specific#has_DatePeriod
+<http://www.co-ode.org/ontologies/specific#has_DatePeriod> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_Description
+<http://www.co-ode.org/ontologies/specific#has_Description> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_EndDate
+<http://www.co-ode.org/ontologies/specific#has_EndDate> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:range <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_Location
+<http://www.co-ode.org/ontologies/specific#has_Location> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_Name
+<http://www.co-ode.org/ontologies/specific#has_Name> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf <http://www.co-ode.org/ontologies/specific#has_Description> ;
+                                                     rdfs:range <http://www.co-ode.org/ontologies/specific#Name> .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_Owning_LegalBizEntity
+<http://www.co-ode.org/ontologies/specific#has_Owning_LegalBizEntity> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_Owning_Loaction
+<http://www.co-ode.org/ontologies/specific#has_Owning_Loaction> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_Phone
+<http://www.co-ode.org/ontologies/specific#has_Phone> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://www.co-ode.org/ontologies/specific#has_Description> ;
+                                                      rdfs:range <http://www.co-ode.org/ontologies/specific#Phone> .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_PhysicalAddress
+<http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> rdf:type owl:ObjectProperty ;
+                                                                rdfs:range <http://www.co-ode.org/ontologies/specific#PhysicalAddress> .
+
+
+###  http://www.co-ode.org/ontologies/specific#has_StartDate
+<http://www.co-ode.org/ontologies/specific#has_StartDate> rdf:type owl:ObjectProperty ;
+                                                          rdfs:range <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#is_Owned_By
+<http://www.co-ode.org/ontologies/specific#is_Owned_By> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/specific#is_descripting
+<http://www.co-ode.org/ontologies/specific#is_descripting> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/specific#is_located_by
+<http://www.co-ode.org/ontologies/specific#is_located_by> rdf:type owl:ObjectProperty .
+
+
+###  http://www.co-ode.org/ontologies/specific#is_naming
+<http://www.co-ode.org/ontologies/specific#is_naming> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf <http://www.co-ode.org/ontologies/specific#is_descripting> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.co-ode.org/ontologies/specific#Date
+<http://www.co-ode.org/ontologies/specific#Date> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/specific#DatePeriod
+<http://www.co-ode.org/ontologies/specific#DatePeriod> rdf:type owl:Class ;
+                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.co-ode.org/ontologies/specific#has_EndDate> ;
+                                                                         owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Date>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://www.co-ode.org/ontologies/specific#has_StartDate> ;
+                                                                         owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Date>
+                                                                       ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#Description
+<http://www.co-ode.org/ontologies/specific#Description> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.co-ode.org/ontologies/specific#is_descripting> ;
+                                                                          owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#IndependentParty>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.co-ode.org/ontologies/specific#is_descripting> ;
+                                                                          owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Role>
+                                                                        ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#Director
+<http://www.co-ode.org/ontologies/specific#Director> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <http://www.co-ode.org/ontologies/specific#Role> ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#has_DatePeriod> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#DatePeriod>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Location> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Location>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Name> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Name>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Phone> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Phone>
+                                                                     ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#Entity_Owner
+<http://www.co-ode.org/ontologies/specific#Entity_Owner> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.co-ode.org/ontologies/specific#Role> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.co-ode.org/ontologies/specific#has_DatePeriod> ;
+                                                                           owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#DatePeriod>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Location> ;
+                                                                           owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Location>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Name> ;
+                                                                           owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Name>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Owning_LegalBizEntity> ;
+                                                                           owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Legal_BizEntity>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Phone> ;
+                                                                           owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Phone>
+                                                                         ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#IndependentParty
+<http://www.co-ode.org/ontologies/specific#IndependentParty> rdf:type owl:Class ;
+                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Description> ;
+                                                                               owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Description>
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Location> ;
+                                                                               owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Location>
+                                                                             ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_BizEntity
+<http://www.co-ode.org/ontologies/specific#Legal_BizEntity> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://www.co-ode.org/ontologies/specific#IndependentParty> ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Location> ;
+                                                                              owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Location>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Name> ;
+                                                                              owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Name>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Phone> ;
+                                                                              owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Phone>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.co-ode.org/ontologies/specific#is_Owned_By> ;
+                                                                              owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Entity_Owner>
+                                                                            ] ;
+                                                            owl:disjointWith <http://www.co-ode.org/ontologies/specific#Legal_Person> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_Person
+<http://www.co-ode.org/ontologies/specific#Legal_Person> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <http://www.co-ode.org/ontologies/specific#IndependentParty> ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Location> ;
+                                                                           owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Location>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Name> ;
+                                                                           owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Name>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Phone> ;
+                                                                           owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Phone>
+                                                                         ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#Location
+<http://www.co-ode.org/ontologies/specific#Location> rdf:type owl:Class ;
+                                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#has_DatePeriod> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#DatePeriod>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#PhysicalAddress>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#is_located_by> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Director>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#is_located_by> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Entity_Owner>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#is_located_by> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Legal_BizEntity>
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.co-ode.org/ontologies/specific#is_located_by> ;
+                                                                       owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Legal_Person>
+                                                                     ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#Name
+<http://www.co-ode.org/ontologies/specific#Name> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://www.co-ode.org/ontologies/specific#Description> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.co-ode.org/ontologies/specific#is_naming> ;
+                                                                   owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Director>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.co-ode.org/ontologies/specific#is_naming> ;
+                                                                   owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Entity_Owner>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.co-ode.org/ontologies/specific#is_naming> ;
+                                                                   owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Legal_BizEntity>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.co-ode.org/ontologies/specific#is_naming> ;
+                                                                   owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Legal_Person>
+                                                                 ] ;
+                                                 owl:disjointWith <http://www.co-ode.org/ontologies/specific#Phone> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Phone
+<http://www.co-ode.org/ontologies/specific#Phone> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.co-ode.org/ontologies/specific#Description> .
+
+
+###  http://www.co-ode.org/ontologies/specific#PhysicalAddress
+<http://www.co-ode.org/ontologies/specific#PhysicalAddress> rdf:type owl:Class ;
+                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Owning_Loaction> ;
+                                                                              owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Location>
+                                                                            ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#Role
+<http://www.co-ode.org/ontologies/specific#Role> rdf:type owl:Class ;
+                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Description> ;
+                                                                   owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Description>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Location> ;
+                                                                   owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Location>
+                                                                 ] .
+
+
+###  http://www.co-ode.org/ontologies/specific#Staff
+<http://www.co-ode.org/ontologies/specific#Staff> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.co-ode.org/ontologies/specific#Role> ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.co-ode.org/ontologies/specific#has_DatePeriod> ;
+                                                                    owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#DatePeriod>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Location> ;
+                                                                    owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Location>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Name> ;
+                                                                    owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Name>
+                                                                  ] ,
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://www.co-ode.org/ontologies/specific#has_Phone> ;
+                                                                    owl:someValuesFrom <http://www.co-ode.org/ontologies/specific#Phone>
+                                                                  ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.co-ode.org/ontologies/specific#ANZ_Bank
+<http://www.co-ode.org/ontologies/specific#ANZ_Bank> rdf:type owl:NamedIndividual ,
+                                                              <http://www.co-ode.org/ontologies/specific#Name> ;
+                                                     <http://www.co-ode.org/ontologies/specific#is_descripting> <http://www.co-ode.org/ontologies/specific#Legal_BizEntity2> ;
+                                                     <http://www.co-ode.org/ontologies/specific#is_naming> <http://www.co-ode.org/ontologies/specific#Entity_Owner1> .
+
+
+###  http://www.co-ode.org/ontologies/specific#ASB_Bank
+<http://www.co-ode.org/ontologies/specific#ASB_Bank> rdf:type owl:NamedIndividual ,
+                                                              <http://www.co-ode.org/ontologies/specific#Name> ;
+                                                     <http://www.co-ode.org/ontologies/specific#is_descripting> <http://www.co-ode.org/ontologies/specific#Legal_BizEntity1> ;
+                                                     <http://www.co-ode.org/ontologies/specific#is_naming> <http://www.co-ode.org/ontologies/specific#Legal_BizEntity1> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Date1
+<http://www.co-ode.org/ontologies/specific#Date1> rdf:type owl:NamedIndividual ,
+                                                           <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Date2
+<http://www.co-ode.org/ontologies/specific#Date2> rdf:type owl:NamedIndividual ,
+                                                           <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Date3
+<http://www.co-ode.org/ontologies/specific#Date3> rdf:type owl:NamedIndividual ,
+                                                           <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Date4
+<http://www.co-ode.org/ontologies/specific#Date4> rdf:type owl:NamedIndividual ,
+                                                           <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Date5
+<http://www.co-ode.org/ontologies/specific#Date5> rdf:type owl:NamedIndividual ,
+                                                           <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Date6
+<http://www.co-ode.org/ontologies/specific#Date6> rdf:type owl:NamedIndividual ,
+                                                           <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Date7
+<http://www.co-ode.org/ontologies/specific#Date7> rdf:type owl:NamedIndividual ,
+                                                           <http://www.co-ode.org/ontologies/specific#Date> .
+
+
+###  http://www.co-ode.org/ontologies/specific#DatePeriod1
+<http://www.co-ode.org/ontologies/specific#DatePeriod1> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.co-ode.org/ontologies/specific#DatePeriod> ;
+                                                        <http://www.co-ode.org/ontologies/specific#has_EndDate> <http://www.co-ode.org/ontologies/specific#Date2> ;
+                                                        <http://www.co-ode.org/ontologies/specific#has_StartDate> <http://www.co-ode.org/ontologies/specific#Date1> .
+
+
+###  http://www.co-ode.org/ontologies/specific#DatePeriod2
+<http://www.co-ode.org/ontologies/specific#DatePeriod2> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.co-ode.org/ontologies/specific#DatePeriod> ;
+                                                        <http://www.co-ode.org/ontologies/specific#has_EndDate> <http://www.co-ode.org/ontologies/specific#Date4> ;
+                                                        <http://www.co-ode.org/ontologies/specific#has_StartDate> <http://www.co-ode.org/ontologies/specific#Date3> .
+
+
+###  http://www.co-ode.org/ontologies/specific#DatePeroid3
+<http://www.co-ode.org/ontologies/specific#DatePeroid3> rdf:type owl:NamedIndividual ,
+                                                                 <http://www.co-ode.org/ontologies/specific#DatePeriod> ;
+                                                        <http://www.co-ode.org/ontologies/specific#has_EndDate> <http://www.co-ode.org/ontologies/specific#Date6> ;
+                                                        <http://www.co-ode.org/ontologies/specific#has_StartDate> <http://www.co-ode.org/ontologies/specific#Date5> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Director1
+<http://www.co-ode.org/ontologies/specific#Director1> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/specific#Director> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#Steven> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Entity_Owner1
+<http://www.co-ode.org/ontologies/specific#Entity_Owner1> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/specific#Entity_Owner> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location4> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#ANZ_Bank> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Owning_LegalBizEntity> <http://www.co-ode.org/ontologies/specific#Legal_BizEntity1> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Entity_Owner2
+<http://www.co-ode.org/ontologies/specific#Entity_Owner2> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/specific#Entity_Owner> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location6> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#Wolf> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Owning_LegalBizEntity> <http://www.co-ode.org/ontologies/specific#Legal_BizEntity3> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Entity_Owner3
+<http://www.co-ode.org/ontologies/specific#Entity_Owner3> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/specific#Entity_Owner> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location5> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#Mave> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Owning_LegalBizEntity> <http://www.co-ode.org/ontologies/specific#Legal_BizEntity1> ,
+                                                                                                                                <http://www.co-ode.org/ontologies/specific#Legal_BizEntity4> ,
+                                                                                                                                <http://www.co-ode.org/ontologies/specific#Legal_BizEntity5> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Genesis
+<http://www.co-ode.org/ontologies/specific#Genesis> rdf:type owl:NamedIndividual ,
+                                                             <http://www.co-ode.org/ontologies/specific#Name> ;
+                                                    <http://www.co-ode.org/ontologies/specific#is_descripting> <http://www.co-ode.org/ontologies/specific#Genesis> ;
+                                                    <http://www.co-ode.org/ontologies/specific#is_naming> <http://www.co-ode.org/ontologies/specific#Legal_BizEntity4> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_BizEntity1
+<http://www.co-ode.org/ontologies/specific#Legal_BizEntity1> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#Legal_BizEntity> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location1> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#ASB_Bank> ;
+                                                             <http://www.co-ode.org/ontologies/specific#is_Owned_By> <http://www.co-ode.org/ontologies/specific#Entity_Owner1> ,
+                                                                                                                     <http://www.co-ode.org/ontologies/specific#Entity_Owner3> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_BizEntity2
+<http://www.co-ode.org/ontologies/specific#Legal_BizEntity2> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#Legal_BizEntity> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location4> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#ANZ_Bank> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_BizEntity3
+<http://www.co-ode.org/ontologies/specific#Legal_BizEntity3> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#Legal_BizEntity> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location2> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#2Degree> ;
+                                                             <http://www.co-ode.org/ontologies/specific#is_Owned_By> <http://www.co-ode.org/ontologies/specific#Entity_Owner2> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_BizEntity4
+<http://www.co-ode.org/ontologies/specific#Legal_BizEntity4> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#Legal_BizEntity> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location4> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#Genesis> ;
+                                                             <http://www.co-ode.org/ontologies/specific#is_Owned_By> <http://www.co-ode.org/ontologies/specific#Entity_Owner3> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_BizEntity5
+<http://www.co-ode.org/ontologies/specific#Legal_BizEntity5> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#Legal_BizEntity> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location6> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#Wolf> ;
+                                                             <http://www.co-ode.org/ontologies/specific#is_Owned_By> <http://www.co-ode.org/ontologies/specific#Entity_Owner3> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_Person3
+<http://www.co-ode.org/ontologies/specific#Legal_Person3> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/specific#Legal_Person> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location2> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Legal_Person4
+<http://www.co-ode.org/ontologies/specific#Legal_Person4> rdf:type owl:NamedIndividual ,
+                                                                   <http://www.co-ode.org/ontologies/specific#Legal_Person> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Location> <http://www.co-ode.org/ontologies/specific#Location5> ;
+                                                          <http://www.co-ode.org/ontologies/specific#has_Name> <http://www.co-ode.org/ontologies/specific#Mave> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Location1
+<http://www.co-ode.org/ontologies/specific#Location1> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/specific#Location> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_DatePeriod> <http://www.co-ode.org/ontologies/specific#DatePeriod1> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> <http://www.co-ode.org/ontologies/specific#PhysicalAddress1> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Location2
+<http://www.co-ode.org/ontologies/specific#Location2> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/specific#Location> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_DatePeriod> <http://www.co-ode.org/ontologies/specific#DatePeriod2> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> <http://www.co-ode.org/ontologies/specific#PhysicalAddress2> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Location3
+<http://www.co-ode.org/ontologies/specific#Location3> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/specific#Location> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_DatePeriod> <http://www.co-ode.org/ontologies/specific#DatePeroid3> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> <http://www.co-ode.org/ontologies/specific#PhysicalAddress1> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Location4
+<http://www.co-ode.org/ontologies/specific#Location4> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/specific#Location> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_DatePeriod> <http://www.co-ode.org/ontologies/specific#DatePeriod2> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> <http://www.co-ode.org/ontologies/specific#PhysicalAddress4> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Location5
+<http://www.co-ode.org/ontologies/specific#Location5> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/specific#Location> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_DatePeriod> <http://www.co-ode.org/ontologies/specific#DatePeroid3> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> <http://www.co-ode.org/ontologies/specific#PhysicalAddress5> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Location6
+<http://www.co-ode.org/ontologies/specific#Location6> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/specific#Location> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_DatePeriod> <http://www.co-ode.org/ontologies/specific#DatePeriod2> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> <http://www.co-ode.org/ontologies/specific#PhysicalAddress6> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Location7
+<http://www.co-ode.org/ontologies/specific#Location7> rdf:type owl:NamedIndividual ,
+                                                               <http://www.co-ode.org/ontologies/specific#Location> ;
+                                                      <http://www.co-ode.org/ontologies/specific#has_PhysicalAddress> <http://www.co-ode.org/ontologies/specific#PhysicalAddress7> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Mave
+<http://www.co-ode.org/ontologies/specific#Mave> rdf:type owl:NamedIndividual ,
+                                                          <http://www.co-ode.org/ontologies/specific#Name> ;
+                                                 <http://www.co-ode.org/ontologies/specific#is_descripting> <http://www.co-ode.org/ontologies/specific#Entity_Owner3> ,
+                                                                                                            <http://www.co-ode.org/ontologies/specific#Legal_Person4> ;
+                                                 <http://www.co-ode.org/ontologies/specific#is_naming> <http://www.co-ode.org/ontologies/specific#Entity_Owner3> ,
+                                                                                                       <http://www.co-ode.org/ontologies/specific#Legal_Person4> .
+
+
+###  http://www.co-ode.org/ontologies/specific#PhysicalAddress1
+<http://www.co-ode.org/ontologies/specific#PhysicalAddress1> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#PhysicalAddress> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Owning_Loaction> <http://www.co-ode.org/ontologies/specific#Location1> ,
+                                                                                                                             <http://www.co-ode.org/ontologies/specific#Location3> .
+
+
+###  http://www.co-ode.org/ontologies/specific#PhysicalAddress2
+<http://www.co-ode.org/ontologies/specific#PhysicalAddress2> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#PhysicalAddress> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Owning_Loaction> <http://www.co-ode.org/ontologies/specific#Location2> .
+
+
+###  http://www.co-ode.org/ontologies/specific#PhysicalAddress3
+<http://www.co-ode.org/ontologies/specific#PhysicalAddress3> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#PhysicalAddress> .
+
+
+###  http://www.co-ode.org/ontologies/specific#PhysicalAddress4
+<http://www.co-ode.org/ontologies/specific#PhysicalAddress4> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#PhysicalAddress> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Owning_Loaction> <http://www.co-ode.org/ontologies/specific#Location4> .
+
+
+###  http://www.co-ode.org/ontologies/specific#PhysicalAddress5
+<http://www.co-ode.org/ontologies/specific#PhysicalAddress5> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#PhysicalAddress> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Owning_Loaction> <http://www.co-ode.org/ontologies/specific#Location5> .
+
+
+###  http://www.co-ode.org/ontologies/specific#PhysicalAddress6
+<http://www.co-ode.org/ontologies/specific#PhysicalAddress6> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#PhysicalAddress> ;
+                                                             <http://www.co-ode.org/ontologies/specific#has_Owning_Loaction> <http://www.co-ode.org/ontologies/specific#Location6> .
+
+
+###  http://www.co-ode.org/ontologies/specific#PhysicalAddress7
+<http://www.co-ode.org/ontologies/specific#PhysicalAddress7> rdf:type owl:NamedIndividual ,
+                                                                      <http://www.co-ode.org/ontologies/specific#PhysicalAddress> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Sebatian
+<http://www.co-ode.org/ontologies/specific#Sebatian> rdf:type owl:NamedIndividual ,
+                                                              <http://www.co-ode.org/ontologies/specific#Name> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Steven
+<http://www.co-ode.org/ontologies/specific#Steven> rdf:type owl:NamedIndividual ,
+                                                            <http://www.co-ode.org/ontologies/specific#Name> ;
+                                                   <http://www.co-ode.org/ontologies/specific#is_descripting> <http://www.co-ode.org/ontologies/specific#Director1> ;
+                                                   <http://www.co-ode.org/ontologies/specific#is_naming> <http://www.co-ode.org/ontologies/specific#Director1> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Vikash
+<http://www.co-ode.org/ontologies/specific#Vikash> rdf:type owl:NamedIndividual ,
+                                                            <http://www.co-ode.org/ontologies/specific#Name> .
+
+
+###  http://www.co-ode.org/ontologies/specific#Wolf
+<http://www.co-ode.org/ontologies/specific#Wolf> rdf:type owl:NamedIndividual ,
+                                                          <http://www.co-ode.org/ontologies/specific#Name> ;
+                                                 <http://www.co-ode.org/ontologies/specific#is_naming> <http://www.co-ode.org/ontologies/specific#Entity_Owner2> ,
+                                                                                                       <http://www.co-ode.org/ontologies/specific#Legal_BizEntity5> .
+
+
+###  http://www.co-ode.org/ontologies/specific#2Degree
+<http://www.co-ode.org/ontologies/specific#2Degree> rdf:type owl:NamedIndividual ,
+                                                             <http://www.co-ode.org/ontologies/specific#Name> ;
+                                                    <http://www.co-ode.org/ontologies/specific#is_naming> <http://www.co-ode.org/ontologies/specific#Legal_BizEntity3> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.co-ode.org/ontologies/specific#Date>
+                <http://www.co-ode.org/ontologies/specific#DatePeriod>
+                <http://www.co-ode.org/ontologies/specific#Description>
+                <http://www.co-ode.org/ontologies/specific#IndependentParty>
+                <http://www.co-ode.org/ontologies/specific#Location>
+                <http://www.co-ode.org/ontologies/specific#PhysicalAddress>
+                <http://www.co-ode.org/ontologies/specific#Role>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.co-ode.org/ontologies/specific#Director>
+                <http://www.co-ode.org/ontologies/specific#Entity_Owner>
+                <http://www.co-ode.org/ontologies/specific#Staff>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
